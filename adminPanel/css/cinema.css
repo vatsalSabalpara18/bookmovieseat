@@ -1,0 +1,4 @@
+span#cinemaPhoneNoErr, span#cinemaEmailErr, span#cinemaNameErr, span#cinemaAddressErr, span#cinemaDescriptionErr{
+    color: red;
+    font-size: small;
+}

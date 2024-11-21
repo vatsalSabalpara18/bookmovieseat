@@ -1,0 +1,7 @@
+span#cinemas-listErr,
+span#movieNameErr,
+span#moviePosterErr,
+span#movieDescriptionErr{
+    color: red;
+    font-size: small
+}

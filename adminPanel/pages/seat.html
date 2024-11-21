@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="../css/movie.css" /> -->
+    <link rel="stylesheet" href="../css/Styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Seates</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="logo">
+            <i class="ri-menu-line icon icon-0 menu"></i>
+            <h2>Book<span>Movie</span></h2>
+        </div>
+        <div class="search--notification--profile">
+            <div class="search">
+                <input type="text" placeholder="Search Scdule.." />
+                <button><i class="ri-search-2-line"></i></button>
+            </div>
+            <!-- <div class="notification--profile">
+                <div class="picon lock">
+                    <i class="ri-lock-line"></i>
+                </div>
+                <div class="picon bell">
+                    <i class="ri-notification-2-line"></i>
+                </div>
+                <div class="picon chat">
+                    <i class="ri-wechat-2-line"></i>
+                </div>
+                <div class="picon profile">
+                    <img src="assets/images/profile.jpg" alt="">
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <section class="main">
+        <div class="sidebar">
+            <ul class="sidebar--items">
+                <li>
+                    <a href="../index.html" onclick="openCinemaContainer()">
+                        <span class="icon icon-1"><i class="ri-tv-2-line"></i> </span>
+                        <span class="sidebar--item">Cinemas</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon icon-2"><i class="ri-calendar-2-line"></i></span>
+                        <span class="sidebar--item">Schedule</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
+                        <span class="sidebar--item" style="white-space: nowrap;">Reliable Doctor</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon icon-4"><i class="ri-user-line"></i></span>
+                        <span class="sidebar--item">Patients</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="../pages/movie.html" onclick="openMovieContainer()">
+                        <span class="icon icon-2"><i class="ri-film-line"></i> </span>
+                        <span class="sidebar--item">Movies</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../pages/time.html" onclick="openTimeContainer()">
+                        <span class="icon icon-4"><i class="ri-calendar-line"></i> </span>
+                        <span class="sidebar--item">Times</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../pages/seat.html" id="active--link" onclick="openSeatContainer()">
+                        <span class="icon icon-6"> <i class="ri-sofa-line"></i> </span>
+                        <span class="sidebar--item">Seats</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidebar--bottom-items">
+                <li>
+                    <a href="#">
+                        <span class="icon icon-7"><i class="ri-settings-3-line"></i></span>
+                        <span class="sidebar--item">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-8"><i class="ri-logout-box-r-line"></i></span>
+                        <span class="sidebar--item">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main--content">
+            <!-- <div class="overview">
+                <div class="title">
+                    <h2 class="section--title">Overview</h2>
+                    <select name="date" id="date" class="dropdown">
+                        <option value="today">Today</option>
+                        <option value="lastweek">Last Week</option>
+                        <option value="lastmonth">Last Month</option>
+                        <option value="lastyear">Last Year</option>
+                        <option value="alltime">All Time</option>
+                    </select>
+                </div>
+                <div class="cards">
+                    <div class="card card-1">
+                        <div class="card--data">
+                            <div class="card--content">
+                                <h5 class="card--title">Total Doctors</h5>
+                                <h1>152</h1>
+                            </div>
+                            <i class="ri-user-2-line card--icon--lg"></i>
+                        </div>
+                        <div class="card--stats">
+                            <span><i class="ri-bar-chart-fill card--icon stat--icon"></i>65%</span>
+                            <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i>10</span>
+                            <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i>2</span>
+                        </div>
+                    </div>
+                    <div class="card card-2">
+                        <div class="card--data">
+                            <div class="card--content">
+                                <h5 class="card--title">Total Patients</h5>
+                                <h1>1145</h1>
+                            </div>
+                            <i class="ri-user-line card--icon--lg"></i>
+                        </div>
+                        <div class="card--stats">
+                            <span><i class="ri-bar-chart-fill card--icon stat--icon"></i>82%</span>
+                            <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i>230</span>
+                            <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i>45</span>
+                        </div>
+                    </div>
+                    <div class="card card-3">
+                        <div class="card--data">
+                            <div class="card--content">
+                                <h5 class="card--title">Schedule</h5>
+                                <h1>102</h1>
+                            </div>
+                            <i class="ri-calendar-2-line card--icon--lg"></i>
+                        </div>
+                        <div class="card--stats">
+                            <span><i class="ri-bar-chart-fill card--icon stat--icon"></i>27%</span>
+                            <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i>31</span>
+                            <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i>23</span>
+                        </div>
+                    </div>
+                    <div class="card card-4">
+                        <div class="card--data">
+                            <div class="card--content">
+                                <h5 class="card--title">Beds Available</h5>
+                                <h1>15</h1>
+                            </div>
+                            <i class="ri-hotel-bed-line card--icon--lg"></i>
+                        </div>
+                        <div class="card--stats">
+                            <span><i class="ri-bar-chart-fill card--icon stat--icon"></i>8%</span>
+                            <span><i class="ri-arrow-up-s-fill card--icon up--arrow"></i>11</span>
+                            <span><i class="ri-arrow-down-s-fill card--icon down--arrow"></i>2</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="doctors">
+                <div class="title">
+                    <h2 class="section--title">Doctors</h2>
+                    <div class="doctors--right--btns">
+                        <select name="date" id="date" class="dropdown doctor--filter">
+                            <option >Filter</option>
+                            <option value="free">Free</option>
+                            <option value="scheduled">Scheduled</option>
+                        </select>
+                        <button class="add"><i class="ri-add-line"></i>Add Doctor</button>
+                    </div>
+                </div>x
+                <div class="doctors--cards">
+                    <a href="#" class="doctor--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/doctor1.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="free">Free</p>
+                    </a>
+                    <a href="#" class="doctor--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/doctor2.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="scheduled">Scheduled</p>
+                    </a>
+                    <a href="#" class="doctor--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/doctor3.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="scheduled">Scheduled</p>
+                    </a>
+                    <a href="#" class="doctor--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/doctor4.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="free">Free</p>
+                    </a>
+                    <a href="#" class="doctor--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/doctor5.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="scheduled">Scheduled</p>
+                    </a>
+                    <a href="#" class="doctor--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/doctor6.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="free">Free</p>
+                    </a>
+                    <a href="#" class="doctor--card">
+                        <div class="img--box--cover">
+                            <div class="img--box">
+                                <img src="assets/images/doctor7.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="scheduled">Scheduled</p>
+                    </a>
+                </div>
+            </div> -->
+            <!-- <div id="cinema-module">
+          <div class="title">
+            <h2 class="section--title">Cinemas List</h2>
+            <button class="add" onclick="openForm()">
+              <i class="ri-add-line"></i>Add
+            </button>
+          </div>
+          <div class="form-popup" id="myForm">
+            <form class="form-container" onsubmit="handleCinemaSubmit()">
+              <h1>Add Cinemas</h1>
+
+              <div class="main-form-div">
+                <div class="sub-form-div">
+                  <label for="name"><b>Name</b></label>
+                  <input
+                    type="text"
+                    placeholder="Enter Cinema Name"
+                    name="name"
+                    id="cinemaName"
+                  />
+                  <span id="cinemaNameErr"></span><br />
+
+                  <label for="address"><b>Address</b></label>
+                  <textarea
+                    name="address"
+                    cols="20"
+                    rows="2"
+                    placeholder="Enter Cinema Address"
+                    id="cinemaAddress"
+                  ></textarea>
+                  <span id="cinemaAddressErr"></span><br />
+
+                  <label for="description"><b>Description</b></label>
+                  <textarea
+                    name="description"
+                    cols="20"
+                    rows="2"
+                    placeholder="Enter Cinema Description"
+                    id="cinemaDescription"
+                  ></textarea>
+                  <span id="cinemaDescriptionErr"></span><br />
+                </div>
+                <div class="sub-form-div">
+                  <label for="phoneNo"><b>Phone No.</b></label>
+                  <input
+                    type="text"
+                    placeholder="Enter Cinema Phone Number"
+                    name="phoneNo"
+                    id="cinemaPhoneNo"
+                  />
+                  <span id="cinemaPhoneNoErr"></span><br />
+
+                  <label for="email"><b>Email</b></label>
+                  <input
+                    type="text"
+                    placeholder="Enter Cinema Email"
+                    name="email"
+                    id="cinemaEmail"
+                  />
+                  <span id="cinemaEmailErr"></span><br />
+                </div>
+              </div>
+
+              <div class="btn-div">
+                <button type="submit" class="btn" id="cinema-submit">
+                  Submit
+                </button>
+                <button type="button" class="btn cancel" onclick="closeForm()">
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="table" id="cinema-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                  <th>description</th>
+                  <th>Phone No.</th>
+                  <th>Email</th>
+                  <th>Settings</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </div>  -->
+            <!-- <div id="movie-module">
+          <div class="title">
+            <h2 class="section--title">Movies List</h2>
+            <button class="add" onclick="openMovieForm()">
+              <i class="ri-add-line"></i>Add
+            </button>
+          </div>
+          <div class="form-popup" id="movie-form">
+            <form class="form-container" onsubmit="handleMovieSubmit()">
+              <h1>Add Movies</h1>
+
+              <div class="main-form-div">
+                <div class="sub-form-div">
+                  <label for="cinemas-list"><b>Cinema</b></label>
+                  <select name="cinemas-list" id="cineams-list">
+                    <option>--Select-Cinema--</option>
+                  </select>
+                  <span id="cinemas-listErr"></span>
+
+                  <label for="name"><b>Name</b></label>
+                  <input
+                    type="text"
+                    placeholder="Enter Movie Name"
+                    name="name"
+                    id="movieName"
+                  />
+                  <span id="movieNameErr"></span><br />
+
+                  <label for="moivePoster"><b>Poster</b></label
+                  ><br />
+                  <input
+                    type="file"
+                    name="moviePoster"
+                    id="moviePoster"
+                    onchange="handleImage()"
+                  />
+                  <img
+                    src=""
+                    name="posterImg"
+                    id="posterImg"
+                    height="40px"
+                    width="40px"
+                  />
+                  <br /><span id="moviePosterErr"></span><br />
+
+                  <label for="description"><b>Description</b></label>
+                  <textarea
+                    name="description"
+                    cols="20"
+                    rows="2"
+                    placeholder="Enter Movie Description"
+                    id="movieDescription"
+                  ></textarea>
+                  <span id="movieDescriptionErr"></span><br />
+                </div>
+              </div>
+
+              <div class="btn-div">
+                <button type="submit" class="btn" id="cinema-submit">
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="btn cancel"
+                  onclick="closeMovieForm()"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Poster</th>
+                  <th>Cinema Name</th>
+                  <th>description</th>
+                  <th>Settings</th>
+                </tr>
+              </thead>
+              <tbody id="movieTableBody"></tbody>
+            </table>
+          </div>
+        </div> -->
+            <!-- <div id="time-module">
+          <div class="title">
+            <h2 class="section--title">Time List</h2>
+            <button class="add" onclick="openTimeForm()">
+              <i class="ri-add-line"></i>Add
+            </button>
+          </div>
+          <div class="form-popup" id="time-form">
+            <form class="form-container" onsubmit="handleTimeSubmit()">
+              <h1>Time Movies</h1>
+
+              <div class="main-form-div">
+                <div class="sub-form-div">
+                  <label for="cinemas-name"><b>Cinema Name</b></label>
+                  <select
+                    name="cinemas-name"
+                    id="cineams-name"
+                    onchange="handleCinemaChange()"
+                  >
+                    <option>--Select-Cinema--</option>
+                  </select>
+                  <span id="cinemas-nameErr"></span>
+
+                  <label for="movie-name"><b>Movie Name</b></label>
+                  <select name="movie-name" id="movie-name">
+                    <option>--Select-Movie--</option>
+                  </select>
+                  <span id="movie-nameErr"></span><br />
+
+                  <label for="moive-start-date"><b>Movie Start Date</b></label
+                  ><br />
+                  <input
+                    type="date"
+                    name="moive-start-date"
+                    id="movie-start-date"
+                  />
+                  <span id="movie-start-dateErr"></span><br />
+                </div>
+                <div class="sub-form-div">
+                  <label for="moive-end-date"><b>Movie End Date</b></label
+                  ><br />
+                  <input
+                    type="date"
+                    name="moive-end-date"
+                    id="movie-end-date"
+                  />
+                  <span id="movie-end-dateErr"></span><br />
+                  <div id="add-time">
+                    <span id="add-times"><b>Add Time</b></span>
+                    <div id="add-time-1">
+                      <input
+                        type="time"
+                        name="addTimeInput"
+                        id="addTimeInput"
+                      />
+                      <i
+                        class="ri-add-box-line edit"
+                        onclick="handleAddTimeInput()"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn-div">
+                <button type="submit" class="btn" id="time-submit">
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="btn cancel"
+                  onclick="closeTimeForm()"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cinema Name</th>
+                  <th>Movie Name</th>
+                  <th>Movie start Date</th>
+                  <th>Movie End Date</th>
+                  <th>Time</th>
+                  <th>Settings</th>
+                </tr>
+              </thead>
+              <tbody id="timeTableBody"></tbody>
+            </table>
+          </div>
+        </div> -->
+            <div id="seat-module">
+                <div class="title">
+                    <h2 class="section--title">Seat List</h2>
+                    <button class="add" onclick="openSeatForm()">
+                        <i class="ri-add-line"></i>Add
+                    </button>
+                </div>
+                <div class="form-popup" id="seat-form">
+                    <form class="form-container" onsubmit="handleSeatSubmit()">
+                        <h1>Movies Seats</h1>
+
+                        <div class="main-form-div">
+                            <div class="sub-form-div">
+                                <label for="cinemas-name"><b>Cinema Name</b></label>
+                                <select name="cinemas-name" id="cineams-name" onchange="handleCinemaChange()">
+                                    <option>--Select-Cinema--</option>
+                                </select>
+                                <span id="cinemas-nameErr"></span>
+
+                                <label for="movie-name"><b>Movie Name</b></label>
+                                <select name="movie-name" id="movie-name" onchange="handleMovieChange()">
+                                    <option>--Select-Movie--</option>
+                                </select>
+                                <span id="movie-nameErr"></span><br />
+
+                                <label for="movie-time"><b>Movie Time</b></label>
+                                <select name="movie-time" id="movie-time">
+                                    <option>--Select-Movie-Time--</option>
+                                </select>
+                                <span id="movie-timeErr"></span><br />
+
+                                <label for="no-of-seats"><b>No. Of Seats</b></label>
+                                <input type="number" name="no-of-seats" id="no-of-seats" placeholder="Enter No. Of Seat Here">
+                                <span id="no-of-seatsErr"></span>
+
+                                <label for="price"><b>Price</b></label>
+                                <input type="number" name="price" id="price" placeholder="Enter Price Here">
+                                <span id="priceErr"></span>
+
+                                <!-- <label for="moive-start-date"><b>Movie Start Date</b></label
+                  ><br />
+                  <input
+                    type="date"
+                    name="moive-start-date"
+                    id="movie-start-date"
+                  />
+                  <span id="movie-start-dateErr"></span><br /> -->
+                            </div>
+                            <!-- <div class="sub-form-div">
+                                <label for="moive-end-date"><b>Movie End Date</b></label
+                  ><br />
+                  <input
+                    type="date"
+                    name="moive-end-date"
+                    id="movie-end-date"
+                  />
+                  <span id="movie-end-dateErr"></span><br />
+                                <div id="add-time">
+                    <span id="add-times"><b>Add Time</b></span>
+                    <div id="add-time-1">
+                      <input
+                        type="time"
+                        name="addTimeInput"
+                        id="addTimeInput"
+                      />
+                      <i
+                        class="ri-add-box-line edit"
+                        onclick="handleAddTimeInput()"
+                      ></i>
+                    </div>
+                  </div>
+                            </div> -->
+                        </div>
+
+                        <div class="btn-div">
+                            <button type="submit" class="btn" id="time-submit">
+                                Submit
+                            </button>
+                            <button type="button" class="btn cancel" onclick="closeSeatForm()">
+                                Close
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cinema Name</th>
+                                <th>Movie Name</th>
+                                <th>Movie TIme</th>
+                                <th>No. Of Seats</th>
+                                <th>Price</th>
+                                <th>Settings</th>
+                                <!-- <th>Movie start Date</th>
+                  <th>Movie End Date</th>
+                  <th>Time</th>
+                  <th>Settings</th> -->
+                            </tr>
+                        </thead>
+                        <tbody id="seatTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/seat.js"></script>
+    <!-- <script src="JS/cinema.js"></script> -->
+    <!-- <script src="../JS/movie.js"></script> -->
+    <!-- <script src="JS/time.js"></script> -->
+</body>
+
+</html>

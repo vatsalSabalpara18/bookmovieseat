@@ -1,0 +1,110 @@
+div#movie-info {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #1c1c1c;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+div#about-movie-div {
+    position: relative;
+    background-color: #1c1c1c;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+div#user-review {
+    background-color: #1c1c1c;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+div#user-review-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+div.user-review-info {
+    background-color: black;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid white;
+}
+
+div.user-review-info-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+div#user-review-info-star {
+    margin-top: 5px;
+    margin-right: 5px;
+}   
+
+div#movie-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div#Rating-div {
+    font-size: large;
+    background-color: black;
+    padding: 5px;
+    margin: 10px 0px;
+    border-radius: 5px;
+} 
+
+div#movie_img {
+    text-align: center;
+}
+
+div.user-review-info-icon{
+    margin-left: 5px;
+}
+
+h1#movieTitle, h1#user-review-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h1#iser-review-title {
+    margin-left: 5px ;
+}
+
+
+h3#user-review-comment-title {
+    margin-bottom: 10px;
+}
+
+h2#about-text {
+    font-size: large;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+
+span#movie-description-span {
+    font-size: 14px;
+}
+ 
+
+button#book-ticket-btn {
+    background-color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: monospace;
+  color: white;
+  padding: 10px;
+  margin: 10px 0px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.checked {
+    color: orange;
+}

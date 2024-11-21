@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+body {
+    color: #ccc;
+    background:url('../images/body-bg.gif');
+}
+
+div.logo{
+    margin: 10px;
+}
+
+span#logo-span {
+    color: blue;
+}
+
+div.content {
+    width: 50%;
+    margin: 2px auto;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+div.header{
+    text-align: center;
+}
+h1#login-title{
+    /* color: blue; */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input {
+    width: 25rem;
+    height: 2rem;
+    margin: 5px 0px;
+    border-radius: 5px;
+    border: 1px gray solid;
+}
+
+b{
+    /* color: black; */
+    font-size: large;
+}
+
+input[type="submit"], input[type = "button"] {
+    width: 5rem;
+    height: 2rem;
+    /* font-weight: 700; */
+    /* font-size: medium; */
+    font-family: monospace;
+    color: white;
+    background-color: blue;
+    margin-left: 10px;
+    border-radius: 5px;
+
+}
+
+hr.division-line{
+    margin: 10px 0px;
+    border-style: dashed;
+    width: 100%;
+}
+
+div.btn {
+    display: flex;
+    justify-content: center;
+}
+
+div#login-footer {
+    font-size: medium;
+    text-align: center;
+}
+
+div#login-form{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    /* left: 50%;
+    transform: translateY(-50%); */
+}
+
+a {
+    color: darkgoldenrod;
+}
+
+
+span.error {
+    color: red;
+    font-size: medium;
+}

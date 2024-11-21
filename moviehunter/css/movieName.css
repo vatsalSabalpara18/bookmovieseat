@@ -1,0 +1,44 @@
+h1#movieTitle {
+    font-size: large;
+    font-weight: bold;
+}
+
+/* ul#cinema_ul, ul#movie_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #333333;
+}
+
+li.cinema_li, li.movie_li {
+  float: left;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  border: 1px white solid;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+a.cinema_a , a.movie_a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+li.cinema_li a.cinema_a , li.movie_li a.movie_a{
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
+}
+
+li.cinema_li:hover , li.movie_li:hover{
+  background-color: black;
+  border: none;
+} */

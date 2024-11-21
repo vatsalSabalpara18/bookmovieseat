@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>User register</title>
+  </head>
+  <body>
+    <div id="login-shell">
+      <div class="logo">
+        <h1>Book<span id="logo-span">Movie</span></h1>
+        <hr class="division-line" />
+        <div class="content">
+          <div class="header">
+            <h1 id="login-title">Register</h1>
+          </div>
+          <div id="login-form">
+            <form action="" id="login-inputs">
+              <label for="userName"><b>UserName: </b></label>
+              <input type="text" name="userName" id="userName" placeholder="Enter your username"/><br>
+              <span class="error" id="userName-error"></span><br>
+
+              <label for="email"><b>Email: </b></label>
+              <input type="text" name="email" id="email" placeholder="Enter your Email"/><br>
+              <span class="error" id="email-error"></span><br>
+
+              <label for="userPassWord"><b>Password: </b></label>
+              <input type="password" name="userPassWord" id="userPassWord" placeholder="Enter your password"/><br>
+              <span class="error" id="userPassWord-error"></span><br>
+
+              <label for="userPassWord"><b>ReType-Password: </b></label>
+              <input type="password" name="reType-PassWord" id="reType-PassWord" placeholder="Enter your password"/><br>
+              <span class="error" id="reType-PassWord-error"></span><br>
+
+              <div class="btn">
+                <input type="submit" value="Register" id="login-btn" />
+                <input type="button" value="Clear" id="clear-btn" onclick="handleClear()"/>
+              </div>
+            </form>
+          </div>
+          <div id="login-footer">
+            <span id="creat-account">already registered? <a href="../index.html">please login</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/register.js"></script>
+  </body>
+</html>

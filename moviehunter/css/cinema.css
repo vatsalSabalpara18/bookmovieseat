@@ -1,0 +1,227 @@
+ul#cinema_ul,
+ul#movie_ul,
+ul#date_ul,
+ul#time_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* position: relative; */
+  /* background-color: #333333; */
+}
+
+ul#seat_ul, ul#myTicket_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  /* background-color: #333333; */
+}
+
+li.seat_li {
+  float: left;
+  margin: 5px;
+}
+
+li.seat_li button.seat_button {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  background-color: #111111;
+}
+
+li.seat_li button.seat_button:hover {
+  background-color: white;
+  color: #111111;
+}
+
+li.myTicket_li {
+  float: left;
+  margin: 5px;
+}
+
+div.myTicket_div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr ;
+  column-gap: 10px;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+
+button#rate-us-button {
+  background-color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: monospace;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+span#movie_Name {
+  font-size: medium;
+  margin: 5px;
+}
+
+li.cinema_li,
+li.movie_li,
+li.date_li,
+li.time_li{
+  float: left;
+  height: 200px;
+  width: 150px;
+  position: relative;
+  border: 1px white solid;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+a.cinema_a,
+a.movie_a,
+a.date_a,
+a.time_a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+li.cinema_li a.cinema_a,
+li.movie_li a.movie_a,
+li.date_li a.date_a,
+li.time_li a.time_a,
+li.seat_li button.seat_button {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
+}
+
+li.cinema_li:hover,
+li.movie_li:hover,
+li.date_li:hover,
+li.time_li:hover,
+li.seat_button:hover {
+  background-color: black;
+  border: none;
+}
+
+div#time-list {
+  /* display: block; */
+  /* position: fixed; */
+  position: relative;
+  overflow-y: auto;
+}
+
+/* div#booking-pop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  width: 300px;
+  font-family: monospace;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: aqua;
+  border-radius: 5px;
+} */
+/* span#booking-text {
+  color: #111111;
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 20px;
+} */
+
+div#book-btn {
+  display: flex;
+  justify-content: right;
+  /* width: 50%; */
+  /* margin: 10px auto; */
+}
+
+button#submit,
+button#cancel {
+  background-color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: monospace;
+  color: white;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button#logIn-btn,
+button#logOut-btn {
+  background-color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: monospace;
+  color: white;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button#logOut-btn {
+  font-size: medium;
+  padding: 5px;
+}
+
+.dropbtn {
+  background-color:black;
+  color: white;
+  padding: 5px;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #1c1c11;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111111;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
